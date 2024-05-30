@@ -44,12 +44,11 @@ if(REF_BACKEND)
         ${EXCLUDE_LIST}
         "source/boosting/brownboost_dense_batch.cpp"
         "source/em/em_gmm_dense_batch.cpp"
-        "source/linear_regression/lin_reg_qr_dense_distr.cpp"
-        "source/pca/pca_cor*"
-        "source/qr/qr_dense*"
-        "source/svd/svd_dense_batch.cpp"
-)
+        "source/pca/pca_cor_csr*"
+    )
 endif()
+
+include("target_excludes.cmake")
 
 # Define variable to specify the examples or directories to include or exclude
 option(EXAMPLES_LIST "")
